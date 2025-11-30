@@ -1,0 +1,64 @@
+:root {
+	--better-findbar-transform-translateX: -50%;
+	--better-findbar-transform-translateY: -150px;
+	--better-findbar-position-top: 15px;
+	--better-findbar-position-bottom: auto;
+	--better-findbar-position-left: 50%;
+	--better-findbar-position-right: auto;
+	--better-findbar-background-color: var(--zen-colors-primary);
+}
+
+findbar {
+	display: flex !important;
+
+	border-radius: var(--zen-border-radius) !important;
+	margin: 0px !important;
+
+	width: 90% !important;
+	max-width: calc(var(--theme-better_find_bar-textbox_width) * 1px); 
+
+	height: auto !important;
+
+	position: absolute !important;
+	top: var(--better-findbar-position-top);
+	bottom: var(--better-findbar-position-bottom);
+	left: var(--better-findbar-position-left);
+	right: var(--better-findbar-position-right);
+	transform: translateX(var(--better-findbar-transform-translateX)) translateY(0);
+
+	overflow: unset !important;
+	box-shadow: var(--box-shadow-10);
+
+	background: var(--better-findbar-background-color) !important;
+	border: 1px solid var(--input-border-color) !important;
+
+	transition: transform 0.35s ease !important;
+
+	visibility: visible !important;
+	opacity: 1 !important;
+
+	& .findbar-container {
+		flex-wrap: wrap;
+		overflow-x: auto !important;
+		height: auto !important;
+
+		row-gap: 10px;
+
+		& > :first-child {
+			width: 100% !important;
+		}
+
+		& .findbar-textbox {
+			flex-grow: 1;
+		}
+	}
+
+	&[hidden] {
+		transform: translateX(var(--better-findbar-transform-translateX)) translateY(var(--better-findbar-transform-translateY));
+	}
+
+	@starting-style {
+		transform: translateX(var(--better-findbar-transform-translateX)) translateY(var(--better-findbar-transform-translateY));
+	}
+}
+
