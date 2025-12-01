@@ -38,19 +38,19 @@
     pulse.enable = true;
   };
 
-  services.xserver.videoDrivers = [ "nvidia" ];
-  hardware = {
-    graphics.enable = true;
-    nvidia = {
-      open = false;
-      prime = {
-        sync.enable = true;
-
-        intelBusId = "PCI:0:2:0";
-        nvidiaBusId = "PCI:1:0:0";
-      };
-    };
-  };
+  #services.xserver.videoDrivers = [ "nvidia" ];
+  #hardware = {
+  #  graphics.enable = true;
+  #  nvidia = {
+  #    open = false;
+  #    prime = {
+  #      sync.enable = true;
+  #
+  #      intelBusId = "PCI:0:2:0";
+  #      nvidiaBusId = "PCI:1:0:0";
+  #    };
+  #  };
+  #};
 
   # List packages installed in system profile.
   # You can use https://search.nixos.org/ to find more packages (and options).

@@ -17,6 +17,7 @@
   programs.bash = {
     enable = true;
     historySize = 1000;
+    historyControl = [ "ignoreboth" ];
     shellAliases = {
       ll = "ls -l";
       mkdir = "mkdir -p";
@@ -33,8 +34,6 @@
     BROWSER = "zen";
     TERMINAL = "alacritty";
     EDITOR = "vim";
-    LIBVA_DRIVER_NAME = "nvidia";
-    __GLX_VENDOR_LIBRARY_NAME = "nvidia";
     NIXOS_OZONE_WL = "1";
     ELECTRON_OZONE_PLATFORM_HINT = "auto";
   };
@@ -43,5 +42,70 @@
     enable = true;
     userEmail = "anhduc130703@gmail.com";
     userName = "partridge";
+  };
+
+  programs.alacritty = {
+    enable = true;
+    theme = "catppuccin_mocha";
+  };
+
+  programs.starship = {
+    enable = true;
+    enableBashIntegration = true;
+    settings = {
+      "$schema" = "https://starship.rs/config-schema.json";
+
+      bun = { format = "via [$symbol]($style)"; };
+      buf = { format = "with [$symbol]($style)"; };
+      c = { format = "via [$symbol($name)]($style)"; };
+      cmake = { format = "via [$symbol]($style)"; };
+      cobol = { format = "via [$symbol]($style)"; };
+      cpp = { format = "via [$symbol($name)]($style)"; };
+      crystal = { format = "via [$symbol]($style)"; };
+      daml = { format = "via [$symbol]($style)"; };
+      dart = { format = "via [$symbol]($style)"; };
+      deno = { format = "via [$symbol]($style)"; };
+      dotnet = { format = "[$symbol(🎯 $tfm )]($style)"; };
+      elixir = { format = "via [$symbol]($style)"; };
+      elm = { format = "via [$symbol]($style)"; };
+      erlang = { format = "via [$symbol]($style)"; };
+      fennel = { format = "via [$symbol]($style)"; };
+      gleam = { format = "via [$symbol]($style)"; };
+      golang = { format = "via [$symbol]($style)"; };
+      gradle = { format = "via [$symbol]($style)"; };
+      haskell = { format = "via [$symbol]($style)"; };
+      haxe = { format = "via [$symbol]($style)"; };
+      helm = { format = "via [$symbol]($style)"; };
+      java = { format = "via [$symbol]($style)"; };
+      julia = { format = "via [$symbol]($style)"; };
+      kotlin = { format = "via [$symbol]($style)"; };
+      lua = { format = "via [$symbol]($style)"; };
+      meson = { format = "via [$symbol]($style)"; };
+      mojo = { format = "with [$symbol]($style)"; };
+      nim = { format = "via [$symbol]($style)"; };
+      nodejs = { format = "via [$symbol]($style)"; };
+      ocaml = { format = "via [$symbol(\\($switch_indicator$switch_name\\) )]($style)"; };
+      odin = { format = "via [$symbol]($style)"; };
+      opa = { format = "via [$symbol]($style)"; };
+      perl = { format = "via [$symbol]($style)"; };
+      php = { format = "via [$symbol]($style)"; };
+      pixi = { format = "via [$symbol($environment )]($style)"; };
+      pulumi = { format = "via [$symbol$stack]($style)"; };
+      purescript = { format = "via [$symbol]($style)"; };
+      python = { format = "via [$symbol]($style)"; };
+      quarto = { format = "via [$symbol]($style)"; };
+      raku = { format = "via [$symbol]($style)"; };
+      red = { format = "via [$symbol]($style)"; };
+      rlang = { format = "via [$symbol]($style)"; };
+      ruby = { format = "via [$symbol]($style)"; };
+      rust = { format = "via [$symbol]($style)"; };
+      scala = { format = "via [$symbol]($style)"; };
+      solidity = { format = "via [$symbol]($style)"; };
+      swift = { format = "via [$symbol]($style)"; };
+      typst = { format = "via [$symbol]($style)"; };
+      vagrant = { format = "via [$symbol]($style)"; };
+      vlang = { format = "via [$symbol]($style)"; };
+      zig = { format = "via [$symbol]($style)"; };
+    };
   };
 }

@@ -29,11 +29,20 @@
     flavor = "mocha";
     accent = "maroon";
 
-    waybar = {
+    alacritty = {
       enable = true;
     };
 
+    waybar = {
+      enable = true;
+      mode = "createLink";
+    };
+
     vesktop = {
+      enable = true;
+    };
+
+    starship = {
       enable = true;
     };
   };

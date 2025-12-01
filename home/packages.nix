@@ -3,8 +3,6 @@
   home.packages = with pkgs; [
     ripgrep
     htop
-    alacritty
-    starship
     vesktop
     hyprpaper
     xfce.thunar
@@ -13,5 +11,7 @@
     xdg-utils
     hyprshot
     fastfetch
+    slack
+    jetbrains-toolbox
   ];
 }

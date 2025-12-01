@@ -1,7 +1,7 @@
 { config, inputs, ... }:
 {
   imports = with inputs; [
-    zen-browser.homeModules.twilight-official
+    zen-browser.homeModules.twilight
   ];
 
   home.file.".zen/default/chrome/userChrome.css".source = ./userChrome.css;
@@ -76,7 +76,7 @@
           "layout.show_previous_page" = false;
           "browser.startup.homepage" = "chrome://browser/content/blanktab.html";
           "browser.startup.page" = 0;
-          "browser.startup.firstrunSkipsHomepage" = false;
+          "browser.newtabpage.enabled" = false;
         };
     };
 
