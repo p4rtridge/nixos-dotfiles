@@ -6,6 +6,7 @@
 
 toolbarbutton.titlebar-button.titlebar-close,
 #zen-create-new-button,
-.zen-current-workspace-indicator {
+.zen-current-workspace-indicator,
+#zen-current-workspace-indicator-container {
   display: none !important;
 }

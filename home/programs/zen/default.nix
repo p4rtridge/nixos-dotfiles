@@ -82,19 +82,21 @@
 
     profiles.default = rec {
       settings = {
-        "zen.urlbar.replace-newtab" = false;
-        "zen.tabs.show-newtab-vertical" = true;
-        "zen.urlbar.behavior" = "float";
-        "zen.view.compact.enable-at-startup" = true;
-        "zen.view.show-newtab-button-top" = false;
-        "zen.view.window.scheme" = 0;
         "zen.welcome-screen.seen" = true;
         "zen.workspaces.continue-where-left-off" = false;
-        "zen.view.compact.toolbar-flash-popup" = false;
-        "zen.view.compact.show-background-tab-toast" = true;
+        "zen.urlbar.replace-newtab" = false;
+        "zen.urlbar.behavior" = "float";
+        "zen.tabs.vertical.right-side" = true;
+        "zen.tabs.show-newtab-vertical" = true;
+        "zen.view.show-newtab-button-top" = false;
+        "zen.view.window.scheme" = 0;
         "zen.view.use-single-toolbar" = false;
         "zen.view.sidebar-expanded" = false;
-        "zen.tabs.vertical.right-side" = true;
+        "zen.view.compact.show-background-tab-toast" = false;
+        "zen.view.compact.toolbar-flash-popup" = false;
+        "zen.view.compact.hide-toolbar" = true;
+        "zen.view.compact.enable-at-startup" = true;
+        "zen.view.compact.hide-tabbar" = true;
       };
 
       search = {

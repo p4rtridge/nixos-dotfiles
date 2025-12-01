@@ -13,5 +13,8 @@
     fastfetch
     slack
     jetbrains-toolbox
+    vscode
+    yarn
+    nodejs_24
   ];
 }

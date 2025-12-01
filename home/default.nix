@@ -40,8 +40,8 @@
 
   programs.git = {
     enable = true;
-    userEmail = "anhduc130703@gmail.com";
-    userName = "partridge";
+    userEmail = "duc.na@teko.vn";
+    userName = "Đức Nguyễn Anh";
   };
 
   programs.alacritty = {
