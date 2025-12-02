@@ -5,6 +5,7 @@
     extra-substituters = [
       "https://nix-community.cachix.org"
     ];
+
     extra-trusted-public-keys = [
       "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
     ];
@@ -34,34 +35,67 @@
     };
   };
 
-  outputs = { nixpkgs, home-manager, catppuccin, ... }@inputs: 
-  let
-    hostname = "partridge";
-    username = "partridge";
-    specialArgs = { inherit inputs username; };
-  in
-  {
-    nixosConfigurations = {
-      ${hostname} = nixpkgs.lib.nixosSystem {
-        inherit specialArgs;        
+  outputs =
+    {
+      nixpkgs,
+      home-manager,
+      catppuccin,
+      ...
+    }@inputs:
+    {
+      nixosConfigurations = {
+        partridge =
+          let
+            username = "partridge";
+            specialArgs = { inherit inputs username; };
+          in
+          nixpkgs.lib.nixosSystem {
+            inherit specialArgs;
 
-        modules = [
-          ./host
-          ./modules/hyprland
-          ./users/${username}
-          catppuccin.nixosModules.catppuccin
+            modules = [
+              ./host
+              ./host/nvidia.nix
+              ./modules/hyprland
+              catppuccin.nixosModules.catppuccin
 
-          home-manager.nixosModules.home-manager {
-            home-manager = {
-              useGlobalPkgs = true;
-              useUserPackages = true;
-              backupFileExtension = "backup";
-              extraSpecialArgs = inputs // specialArgs;
-              users.${username} = import ./users/${username}/home.nix;
-            };
-          }
-        ];
+              home-manager.nixosModules.home-manager
+              {
+                home-manager = {
+                  useGlobalPkgs = true;
+                  useUserPackages = true;
+                  backupFileExtension = "backup";
+                  extraSpecialArgs = inputs // specialArgs;
+                  users.${username} = import ./users/${username}/home.nix;
+                };
+              }
+            ];
+          };
+
+        duc-na =
+          let
+            username = "duc-na";
+            specialArgs = { inherit inputs username; };
+          in
+          nixpkgs.lib.nixosSystem {
+            inherit specialArgs;
+
+            modules = [
+              ./host
+              ./modules/hyprland
+              catppuccin.nixosModules.catppuccin
+
+              home-manager.nixosModules.home-manager
+              {
+                home-manager = {
+                  useGlobalPkgs = true;
+                  useUserPackages = true;
+                  backupFileExtension = "backup";
+                  extraSpecialArgs = inputs // specialArgs;
+                  users.${username} = import ./users/${username}/home.nix;
+                };
+              }
+            ];
+          };
       };
     };
-  };
 }

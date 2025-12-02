@@ -33,17 +33,27 @@
       enable = true;
     };
 
+    starship = {
+      enable = true;
+    };
+
+    zsh-syntax-highlighting = {
+      enable = true;
+    };
+
+    btop = {
+      enable = true;
+    };
+
     waybar = {
       enable = true;
       mode = "createLink";
     };
 
-    vesktop = {
+    fcitx5 = {
       enable = true;
-    };
-
-    starship = {
-      enable = true;
+      apply = true;
+      enableRounded = true;
     };
   };
 }
