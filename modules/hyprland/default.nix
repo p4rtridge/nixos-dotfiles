@@ -3,6 +3,8 @@ let
   hostSystem = pkgs.stdenv.hostPlatform.system;
 in
 {
+  services.displayManager.defaultSession = "hyprland";
+  
   programs.hyprland = {
     enable = true;
     package = inputs.hyprland.packages.${hostSystem}.hyprland;
@@ -10,7 +12,9 @@ in
     xwayland.enable = true;
   };
 
-  services.displayManager.defaultSession = "hyprland";
+  environment.systemPackages = [
+    inputs.hyprcursor.packages.${hostSystem}.default
+  ];
 
   fonts = {
     enableDefaultPackages = false;    

@@ -5,14 +5,6 @@
     ".." = "cd ..";
   };
 
-  home.sessionVariables = {
-    BROWSER = "zen";
-    TERMINAL = "alacritty";
-    EDITOR = "vim";
-    NIXOS_OZONE_WL = "1";
-    ELECTRON_OZONE_PLATFORM_HINT = "auto";
-  };
-
   programs.zsh = {
     enable = true;
     enableCompletion = true;

@@ -14,9 +14,6 @@
           disable-scroll = true;
           warp-on-scroll = false;
           format = "{name}";
-          persistent-workspaces = {
-            "*" = 9;
-          };
         };
 
         "tray" = {

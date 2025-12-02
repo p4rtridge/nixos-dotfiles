@@ -16,6 +16,14 @@
 
     hyprland.url = "github:hyprwm/Hyprland/v0.52.1";
 
+    hyprcursor = {
+      url = "github:ndom91/rose-pine-hyprcursor";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        hyprlang.follows = "hyprland/hyprlang";
+      };
+    };
+
     home-manager = {
       url = "github:nix-community/home-manager/release-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
