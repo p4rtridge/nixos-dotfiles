@@ -3,6 +3,7 @@
 @import url("./floating_statusbar.css");
 @import url("./no_sidebar_scrollbar.css");
 @import url("./remove_tab_x.css");
+@import url("./smaller_compact.css");
 
 toolbarbutton.titlebar-button.titlebar-close,
 #zen-create-new-button,

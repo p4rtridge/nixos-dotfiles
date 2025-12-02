@@ -10,6 +10,7 @@
   home.file.".zen/default/chrome/floating_statusbar.css".source = ./floating_statusbar.css;
   home.file.".zen/default/chrome/no_sidebar_scrollbar.css".source = ./no_sidebar_scrollbar.css;
   home.file.".zen/default/chrome/remove_tab_x.css".source = ./remove_tab_x.css;
+  home.file.".zen/default/chrome/smaller_compact.css".source = ./smaller_compact.css;
 
   xdg.mimeApps = let
     associations = builtins.listToAttrs (map (name: {
@@ -50,6 +51,8 @@
         });
 
         mkExtensionSettings = builtins.mapAttrs (_: pluginId: {
+          default_area = "menupanel";
+          private_browsing = true;
           install_url = "https://addons.mozilla.org/firefox/downloads/latest/${pluginId}/latest.xpi";
           installation_mode = "force_installed";
         });
@@ -69,6 +72,7 @@
 
         ExtensionSettings = mkExtensionSettings {
           "uBlock0@raymondhill.net" = "ublock-origin";
+          "addon@darkreader.org" = "darkreader";
         };
 
         Preferences = mkLockedAttrs {
