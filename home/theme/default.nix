@@ -30,6 +30,10 @@
     flavor = "mocha";
     accent = "maroon";
 
+    cursors = {
+      enable = true;
+    };
+
     alacritty = {
       enable = true;
     };
