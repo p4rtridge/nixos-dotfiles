@@ -6,121 +6,83 @@
         layer = "top";
         position = "top";
 
-        modules-left = [ "hyprland/workspaces" "custom/sep" "hyprland/window" "custom/sep" ];
-        modules-center = [];
-        modules-right = [ "custom/sep" "network" "custom/sep" "clock" "custom/sep" "tray" ];
+        modules-left = [ "hyprland/workspaces" ];
+        modules-right = [ "clock" "wireplumber" "battery" "network" "tray" ];
 
         "hyprland/workspaces" = {
-          disable-scroll = true;
-          warp-on-scroll = false;
-          format = "{name}";
+          "disable-scroll" = true;
+          "warp-on-scroll" = false;
+          "format" = "{icon}";
+          "format-icons" = {
+            "1" = "1";
+            "2" = "2";
+            "3" = "3";
+            "4" = "4";
+            "5" = "5";
+            "6" = "6";
+            "7" = "7";
+            "8" = "8";
+            "9" = "9";
+          };
+          "persistent-workspaces" = {
+            "1" = [];
+            "2" = [];
+          };
         };
 
         "tray" = {
-          spacing = 10;
+          "spacing" = 10;
         };
-        
+
         "clock" = {
-          format-alt = "{:%Y-%m-%d}";
+          "tooltip-format" = "{calendar}";
+          "format-alt" = "{:%a, %d %b %Y}";
+          "format" = "{:%H:%M}";
         };
 
         "network" = {
-          format = "Online";
-          format-disconnected = "Disconnected ⚠";
+          "format" = "Online";
+          "format-disconnected" = "Offline";
+          "tooltip-format" = "⇣{bandwidthDownBytes}B ⇡{bandwidthUpBytes}B";
+          "interval" = 5;
         };
 
-        "custom/sep" = {
-          format = "|";
-          interval = 0;
+        "wireplumber" = {
+          "format" = "{icon} {volume}%";
+          "format-muted" = "Muted";
+          "format-icons" = {
+            "default" = ["" "" ""];
+          };
         };
-      };   
+        
+        "battery" = {
+          "format" = "{icon} {capacity}%";
+          "format-icons" = {
+            "default" = ["" "" "" "" ""];
+          };
+        };
+      };
     };
    style = ''
-     @import url("./catppuccin.css");
-     
      * {
        font-family: "Maple Mono NF", monospace;
        font-size: 16px;
        font-weight: bold;
      }
-     
-     window#waybar {
-       background-color: @surface0;
-       color: @text;
+    
+     window#waybar.hidden {
+       opacity: 0.5;
      }
 
      #workspaces button {
        padding: 0 6px;
-       color: @subtext0;
-       background: transparent;
-     }
-
-     #workspaces button.active {
-       color: @text;
-     }
- 
-     #workspaces button.empty {
-       color: @overlay0;
-     }
-
-     #workspaces button.empty.active {
-       color: @text;
-     }
-
-     #workspaces button.urgent {
-       background-color: @crust;
-     }
-
-     button:hover {
-       background: inherit;
      }
 
      #clock,
-     #custom-sep,
      #battery,
-     #cpu,
-     #memory,
-     #disk,
      #network,
      #tray {
        padding: 0 8px;
-       color: @text;
-     }
-
-     #custom-sep {
-       color: @mantle;
-     }
-
-     #clock {
-       color: @text;
-     }
-
-     #battery {
-       color: @text;
-     }
-
-     #disk {
-       color: @text;
-     }
-
-     #memory {
-       color: @text;
-     }
-
-     #cpu {
-       color: @text;
-     }
-
-     #network {
-       color: @text;
-     }
-
-     #network.disconnected {
-       background-color: @red;
-     }
-
-     #tray {
-       background-color: @overlay2;
      }
    '';
   };

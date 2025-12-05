@@ -52,7 +52,10 @@
 
     waybar = {
       enable = true;
-      mode = "createLink";
+    };
+
+    fcitx5 = {
+      enable = false;
     };
   };
 }
