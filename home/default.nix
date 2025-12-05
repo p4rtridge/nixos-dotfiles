@@ -8,6 +8,7 @@
     ./fcitx5
     ./rofi
     ./waybar
+    ./dunst
     ./zen
     ./vesktop
   ];

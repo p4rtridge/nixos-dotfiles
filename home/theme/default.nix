@@ -54,6 +54,10 @@
       enable = true;
     };
 
+    dunst = {
+      enable = true;
+    };
+
     fcitx5 = {
       enable = false;
     };

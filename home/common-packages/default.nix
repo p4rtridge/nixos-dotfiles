@@ -10,7 +10,6 @@
     # clipboard
     wl-clipboard
     cliphist
-        
 
     # screenshot
     hyprshot
