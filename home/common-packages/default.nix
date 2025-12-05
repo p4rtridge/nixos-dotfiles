@@ -24,6 +24,7 @@
     vscode
 
     # misc
+    brightnessctl
     fastfetch
     hyprpaper
     ripgrep
