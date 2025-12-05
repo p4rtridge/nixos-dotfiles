@@ -20,8 +20,9 @@
     nodejs_24
 
     # ide
-    jetbrains-toolbox
     vscode
+    jetbrains.rust-rover
+    jetbrains.datagrip
 
     # misc
     brightnessctl
