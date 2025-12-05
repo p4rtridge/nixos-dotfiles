@@ -54,11 +54,5 @@
       enable = true;
       mode = "createLink";
     };
-
-    fcitx5 = {
-      enable = true;
-      apply = true;
-      enableRounded = true;
-    };
   };
 }
