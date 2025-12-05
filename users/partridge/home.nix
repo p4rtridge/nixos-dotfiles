@@ -11,7 +11,14 @@
 
   programs.git = {
     enable = true;
-    userEmail = "anhduc130703@gmail.com";
-    userName = "partridge";
+    settings = {
+      init = {
+        defaultBranch = "main";
+      };
+      user = {
+        email = "anhduc130703@gmail.com";
+        name = "partridge";
+      };
+    };
   };
 }

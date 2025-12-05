@@ -6,8 +6,12 @@
 
   programs.git = {
     enable = true;
-    userEmail = "duc.na@teko.vn";
-    userName = "Đức Nguyễn Anh";
+    settings = {
+      user = {
+        email = "duc.na@teko.vn";
+        name = "Đức Nguyễn Anh";
+      };
+    };
   };
 
   home.packages = with pkgs; [

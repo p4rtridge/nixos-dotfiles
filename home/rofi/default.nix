@@ -2,7 +2,6 @@
 {
   programs.rofi = {
     enable = true;
-    package = pkgs.rofi-wayland;
     terminal = "${pkgs.alacritty}/bin/alacritty";
     font = "Maple Mono NF";
     location = "center";

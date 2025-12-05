@@ -15,7 +15,7 @@
   home = {
     inherit username;
     homeDirectory = "/home/${username}";
-    stateVersion = "25.05";
+    stateVersion = "25.11";
   };
 
   home.sessionVariables = {
@@ -24,7 +24,7 @@
     EDITOR = "vim";
     NIXOS_OZONE_WL = "1";
     ELECTRON_OZONE_PLATFORM_HINT = "auto";
-    GDK_SCALE = "2";
+    GDK_SCALE = "1.25";
     HYPRCURSOR_THEME = "rose-pine-hyprcursor";
     HYPRCURSOR_SIZE = "24";
     XCURSOR_THEME = "rose-pine-hyprcursor";
