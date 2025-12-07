@@ -15,18 +15,25 @@
     hyprshot
     xdg-utils
 
+    # dev env
+    devenv
+
     # lang
     nodejs_24
 
     # ide
     vscode
     jetbrains.rust-rover
+    jetbrains.rider
     jetbrains.datagrip
 
     # misc
     brightnessctl
+    playerctl
     fastfetch
     hyprpaper
     ripgrep
+    jq
+    unrar
   ];
 }

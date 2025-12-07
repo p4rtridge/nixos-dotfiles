@@ -9,16 +9,18 @@ in
       global = {
         dmenu = "${pkgs.rofi}/bin/rofi -dmenu";
         browser = "xdg-open";
-
+        
         follow = "mouse";
         origin = "top-right";
-        show_indicators = "no";
-        hide_duplicate_count = true;
-        notification_limit = 10;
-        
         mouse_left_click = "do_action";        
         mouse_middle_click = "close_all";
         mouse_right_click = "close_current";
+
+        sort = "update";
+        notification_limit = 5;
+        stack_duplicates = false;
+        show_indicators = "no";
+        hide_duplicate_count = true;
 
         font = "JetBrainsMono Nerd Font";
         icon_theme = "Papirus-Dark";

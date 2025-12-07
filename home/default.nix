@@ -5,6 +5,7 @@
     ./common-packages
     ./theme
     ./shell
+    ./direnv
     ./fcitx5
     ./rofi
     ./waybar
@@ -25,6 +26,7 @@
     EDITOR = "vim";
     NIXOS_OZONE_WL = "1";
     ELECTRON_OZONE_PLATFORM_HINT = "auto";
+    WLR_NO_HARDWARE_CURSORS = "1";
     GDK_SCALE = "1.25";
     HYPRCURSOR_THEME = "rose-pine-hyprcursor";
     HYPRCURSOR_SIZE = "24";

@@ -1,6 +1,7 @@
 {
   imports = [
     ../../home
+    ../../home/heroic
   ];
 
   home.sessionVariables = {
