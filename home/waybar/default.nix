@@ -12,6 +12,7 @@
         "hyprland/workspaces" = {
           "disable-scroll" = true;
           "warp-on-scroll" = false;
+          "all-outputs" = true;
           "format" = "{icon}";
           "format-icons" = {
             "1" = "1";
@@ -26,7 +27,6 @@
           };
           "persistent-workspaces" = {
             "1" = [];
-            "2" = [];
           };
         };
 
@@ -43,7 +43,7 @@
         "network" = {
           "format" = "Online";
           "format-disconnected" = "Offline";
-          "tooltip-format" = "⇣{bandwidthDownBytes}B ⇡{bandwidthUpBytes}B";
+          "tooltip-format" = "⇣{bandwidthDownBytes} ⇡{bandwidthUpBytes}";
           "interval" = 5;
         };
 
@@ -68,6 +68,12 @@
        font-family: "Maple Mono NF", monospace;
        font-size: 16px;
        font-weight: bold;
+       color: @text;
+     }
+
+     window#waybar {
+       background-color: @base;
+       border-color: @crust;
      }
     
      window#waybar.hidden {
@@ -75,6 +81,7 @@
      }
 
      #workspaces button {
+       color: @lavender;
        padding: 0 6px;
      }
 

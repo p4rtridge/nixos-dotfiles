@@ -2,7 +2,7 @@
 {
   imports = [
     ./hyprland
-    ./common-packages
+    ./packages
     ./theme
     ./shell
     ./direnv

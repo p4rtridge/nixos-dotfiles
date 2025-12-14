@@ -8,6 +8,10 @@
     "org/gnome/desktop/interface" = {
       color-scheme = "prefer-dark";
       cursor-theme = "rose-pine-hyprcursor";
+      gtk-theme = "Adwaita-dark";
+    };
+    "org/gnome/desktop/wm/preferences" = {
+      button-layout = ":";
     };
   };
 
@@ -32,6 +36,7 @@
 
     cursors = {
       enable = true;
+      accent = "dark";
     };
 
     alacritty = {

@@ -30,6 +30,11 @@
     '';
   };
 
+  programs.mise = {
+    enable = true;
+    enableZshIntegration = true;
+  };
+
   programs.alacritty = {
     enable = true;
     settings = {

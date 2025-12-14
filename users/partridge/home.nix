@@ -16,10 +16,20 @@
       init = {
         defaultBranch = "main";
       };
+      commit = {
+        gpgsign = true;
+      };
+      tag = {
+        gpgsign = true;
+      };
       user = {
         email = "anhduc130703@gmail.com";
         name = "partridge";
       };
+    };
+    signing = {
+      signByDefault = true;
+      key = "3F932F63FFC7F317";
     };
   };
 }

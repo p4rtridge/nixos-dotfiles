@@ -15,11 +15,9 @@
     hyprshot
     xdg-utils
 
-    # dev env
+    # development
     devenv
-
-    # lang
-    nodejs_24
+    dotnet-sdk_7
 
     # ide
     vscode
@@ -27,13 +25,17 @@
     jetbrains.rider
     jetbrains.datagrip
 
-    # misc
+    # hyprland
     brightnessctl
     playerctl
-    fastfetch
     hyprpaper
+
+    # search
+    fastfetch
     ripgrep
     jq
+
+    # compression
     unrar
   ];
 }

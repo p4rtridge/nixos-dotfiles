@@ -43,8 +43,9 @@
     ];
   };
 
-  nixpkgs.config.allowUnfree = true;
-  
+  networking.hostName = "partridge";
+  networking.networkmanager.enable = true;
+
   nix.settings = {
     trusted-users = [ username ];
     experimental-features = [
@@ -53,13 +54,11 @@
     ];
   };
 
-  networking.hostName = "partridge";
-  networking.networkmanager.enable = true;
+  nixpkgs.config.allowUnfree = true;
   
-  services.pipewire = {
-    enable = true;
-    pulse.enable = true;
-  };
+  nixpkgs.config.permittedInsecurePackages = [
+    "dotnet-sdk-7.0.410"
+  ];
 
   virtualisation = {
     containers.enable = true;
@@ -69,12 +68,43 @@
       defaultNetwork.settings.dns_enabled = true;
     };
   };
+  
+  services.pipewire = {
+    enable = true;
+    pulse.enable = true;
+  };
 
-  programs.zsh.enable = true;
+  services.gnome.gnome-keyring.enable = true;
+
+  services.resolved = {
+    enable = true;
+    dnsovertls = "true";
+    dnssec = "true";
+    extraConfig = ''
+      DNS=45.90.28.0#7d1aba.dns.nextdns.io
+      DNS=2a07:a8c0::#7d1aba.dns.nextdns.io
+      DNS=45.90.30.0#7d1aba.dns.nextdns.io
+      DNS=2a07:a8c1::#7d1aba.dns.nextdns.io
+    '';
+  };
+
+  programs = {
+    zsh.enable = true;
+    nix-ld.enable = true;
+    gnupg.agent = {
+      enable = true;
+      enableSSHSupport = true;
+      pinentryPackage = pkgs.pinentry-curses;
+    };
+  };
 
   environment.systemPackages = with pkgs; [
     git
     vim
+    gcc
+    gnupg
+    gnumake
+    pinentry-curses
     nixfmt-rfc-style
   ];
 
@@ -83,6 +113,8 @@
     dates = lib.mkDefault "weekly";
     options = lib.mkDefault "--delete-older-than 7d";
   };
+
+  nix.optimise.automatic = true;
 
   system.stateVersion = "25.11";
 }
