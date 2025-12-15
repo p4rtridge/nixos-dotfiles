@@ -6,8 +6,9 @@
 @import url("./smaller_compact.css");
 
 toolbarbutton.titlebar-button.titlebar-close,
-#zen-create-new-button,
 .zen-current-workspace-indicator,
+.pinned-tabs-container-separator,
+#zen-create-new-button,
 #zen-current-workspace-indicator-container {
   display: none !important;
 }

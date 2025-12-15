@@ -64,6 +64,7 @@
 
             modules = [
               ./host
+              ./host/dns.nix
               ./host/nvidia.nix
               ./modules/hyprland
               catppuccin.nixosModules.catppuccin

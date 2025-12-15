@@ -5,7 +5,6 @@
     ./packages
     ./theme
     ./shell
-    ./direnv
     ./fcitx5
     ./rofi
     ./waybar

@@ -32,6 +32,9 @@
     };
   };
 
+  networking.hostName = "partridge";
+  networking.networkmanager.enable = true;
+
   users.users.${username} = {
     isNormalUser = true;
     description = "${username}";
@@ -43,9 +46,6 @@
     ];
   };
 
-  networking.hostName = "partridge";
-  networking.networkmanager.enable = true;
-
   nix.settings = {
     trusted-users = [ username ];
     experimental-features = [
@@ -56,10 +56,6 @@
 
   nixpkgs.config.allowUnfree = true;
   
-  nixpkgs.config.permittedInsecurePackages = [
-    "dotnet-sdk-7.0.410"
-  ];
-
   virtualisation = {
     containers.enable = true;
     podman = {
@@ -68,25 +64,20 @@
       defaultNetwork.settings.dns_enabled = true;
     };
   };
+
+  services = {
+    pipewire = {
+      enable = true;
+      pulse.enable = true;
+    };
+    gnome.gnome-keyring = {
+      enable = true;
+    };
+  };
   
-  services.pipewire = {
-    enable = true;
-    pulse.enable = true;
-  };
-
-  services.gnome.gnome-keyring.enable = true;
-
-  services.resolved = {
-    enable = true;
-    dnsovertls = "true";
-    dnssec = "true";
-    extraConfig = ''
-      DNS=45.90.28.0#7d1aba.dns.nextdns.io
-      DNS=2a07:a8c0::#7d1aba.dns.nextdns.io
-      DNS=45.90.30.0#7d1aba.dns.nextdns.io
-      DNS=2a07:a8c1::#7d1aba.dns.nextdns.io
-    '';
-  };
+  nixpkgs.config.permittedInsecurePackages = [
+    "dotnet-sdk-7.0.410"
+  ];
 
   programs = {
     zsh.enable = true;

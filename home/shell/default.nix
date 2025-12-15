@@ -35,6 +35,11 @@
     enableZshIntegration = true;
   };
 
+  programs.direnv = {
+    enable = true;
+    enableZshIntegration = true;
+  };
+
   programs.alacritty = {
     enable = true;
     settings = {
