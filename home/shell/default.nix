@@ -19,7 +19,7 @@
       ];
     };
     history = {
-      ignoreDups = true;
+      ignoreAllDups = true;
       ignoreSpace = true;
       save = 1000;
     };

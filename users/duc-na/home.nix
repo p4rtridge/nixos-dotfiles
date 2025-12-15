@@ -26,7 +26,7 @@
     };
     signing = {
       signByDefault = true;
-      key = "/home/duc-na/.ssh/id_rsa.pub";
+      key = "/home/duc-na/.ssh/id_rsa";
     };
   };
 
