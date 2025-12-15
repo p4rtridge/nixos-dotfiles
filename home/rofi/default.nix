@@ -6,10 +6,9 @@
     font = "Maple Mono NF";
     location = "center";
     cycle = true;
-    modes = [ "drun" "window" ];
+    modes = [ "drun" ];
     extraConfig = {
       display-drun = "";
-      display-window = "";
       drun-display-format = "{name}";
     };
     theme = let
