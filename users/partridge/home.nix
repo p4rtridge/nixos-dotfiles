@@ -1,7 +1,6 @@
 {
   imports = [
     ../../home
-    ../../home/heroic
   ];
 
   home.sessionVariables = {
@@ -29,7 +28,7 @@
     };
     signing = {
       signByDefault = true;
-      key = "3F932F63FFC7F317";
+      key = "EB3FD791319F897B";
     };
   };
 }

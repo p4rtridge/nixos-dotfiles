@@ -92,9 +92,7 @@
   environment.systemPackages = with pkgs; [
     git
     vim
-    gcc
     gnupg
-    gnumake
     pinentry-curses
     nixfmt-rfc-style
   ];

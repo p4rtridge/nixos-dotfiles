@@ -16,12 +16,12 @@
     xdg-utils
 
     # development
-    devenv
+    gcc
+    gnumake
     dotnet-sdk_7
 
     # ide
     vscode
-    jetbrains.rust-rover
     jetbrains.rider
     jetbrains.datagrip
 
