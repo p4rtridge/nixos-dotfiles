@@ -18,11 +18,10 @@
     # development
     gcc
     gnumake
-    dotnet-sdk_7
 
     # ide
     vscode
-    jetbrains.rider
+    jetbrains.rust-rover
     jetbrains.datagrip
 
     # hyprland

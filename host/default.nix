@@ -74,10 +74,6 @@
       enable = true;
     };
   };
-  
-  nixpkgs.config.permittedInsecurePackages = [
-    "dotnet-sdk-7.0.410"
-  ];
 
   programs = {
     zsh.enable = true;
