@@ -18,6 +18,7 @@
     # development
     gcc
     gnumake
+    bruno
 
     # ide
     vscode
@@ -33,6 +34,10 @@
     fastfetch
     ripgrep
     jq
+
+    # crypto
+    openssl
+    mkcert
 
     # compression
     unrar
